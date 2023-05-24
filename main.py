@@ -1,6 +1,8 @@
 from flask import Flask, request, jsonify
 import werkzeug
-import tensorflow as tf
+import sklearn
+from sklearn.cluster import MiniBatchKMeans
+from collections import Counter
 import cv2
 
 app = Flask(__name__)
@@ -17,22 +19,15 @@ def predict_colors(image_path, number_of_colors):
     image = get_image(image_path)
     modified_image = image.reshape(image.shape[0]*image.shape[1], 3)
 
-    def input_fn():
-        return tf.compat.v1.train.limit_epochs(tf.convert_to_tensor(modified_image, dtype=tf.float32), num_epochs=1)
+    clf = MiniBatchKMeans(n_clusters=number_of_colors).fit(modified_image)
+    labels = clf.fit_predict(modified_image)
 
-    kmeans = tf.compat.v1.estimator.experimental.KMeans(num_clusters=number_of_colors, use_mini_batch=False)
+    counts = Counter(labels)
+    center_colors = clf.cluster_centers_
+    ordered_colors = [center_colors[i] for i in counts.keys()]
+    hex_colors = [RGB2HEX(ordered_colors[i]) for i in counts.keys()]
 
-    previousCenters = None
-    numIter = 10
-    for _ in range(numIter):
-        kmeans.train(input_fn)
-        clusterCenters = kmeans.cluster_centers()
-        previousCenters = clusterCenters
-
-    clusterCenters = kmeans.cluster_centers()
-    clusterLabels = list(kmeans.predict_cluster_index(input_fn))
-
-    return clusterCenters
+    return hex_colors
 
 @app.route('/upload', methods=["POST"])
 def upload():
@@ -48,12 +43,9 @@ def upload():
         image_path = "./uploadedimages/" + fileName
         predicted_colors = predict_colors(image_path, number_of_colors)
 
-        # Convert predicted colors to HEX format
-        hex_colors = [RGB2HEX(color) for color in predicted_colors]
-
         return jsonify({
             "message": "Image Uploaded Successfully",
-            "colors": hex_colors
+            "colors": predicted_colors
         })
 
 if __name__ == "__main__":
