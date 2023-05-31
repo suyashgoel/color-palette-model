@@ -44,11 +44,10 @@ def upload():
         predicted_colors = predict_colors(image_path, number_of_colors)
 
         return jsonify({
-            "message": "Image Uploaded Successfully",
             "colors": predicted_colors
         })
 
 if __name__ == "__main__":
-    app.run(debug=True, port=6000)
+    app.run(debug=True, port=8000)
 
 
