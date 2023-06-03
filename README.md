@@ -13,9 +13,9 @@ This is our model for the app - Color Flix
 * [ColorFlix - Color Palette Generator App](https://github.com/bhaveshasasik/color-palette-app)
 
 ## Collaborators
-Suyash Goel - https://github.com/suyashgoel
-Bhavesha Sasikumar - https://github.com/bhaveshasasik
-Minji Yun - https://github.com/minjiyun02
+* Suyash Goel - https://github.com/suyashgoel
+* Bhavesha Sasikumar - https://github.com/bhaveshasasik
+* Minji Yun - https://github.com/minjiyun02
 
 ## References and resources 
 
