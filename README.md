@@ -13,3 +13,5 @@ This is our model for the app - Color Flix
 * [Color Flix: Our first color palette app](https://github.com/bhaveshasasik/color-palette-app)
 
 ## References and resources 
+
+https://towardsdatascience.com/image-color-identification-with-machine-learning-and-image-processing-using-python-f3dd0606bdca
