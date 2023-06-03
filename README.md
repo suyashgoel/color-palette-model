@@ -14,4 +14,4 @@ This is our model for the app - Color Flix
 
 ## References and resources 
 
-https://towardsdatascience.com/image-color-identification-with-machine-learning-and-image-processing-using-python-f3dd0606bdca
+[Image color identification with Machine Learning and Image Processing, using Python](https://towardsdatascience.com/image-color-identification-with-machine-learning-and-image-processing-using-python-f3dd0606bdca)
