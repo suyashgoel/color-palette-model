@@ -15,7 +15,7 @@ This is our model for the app - Color Flix
 ## Installation/Prerequisites
 
 * Must have Python environment set up with Flask, sklearn, and Open CV downloaded.
-  * You can run pip install followed by library name on your terminal 
+  * You can in most cases run pip install followed by library name on your terminal 
   * pip install Flask, pip install scikit-learn, pip install opencv-python
 
 ## Collaborators
