@@ -12,6 +12,11 @@ This is our model for the app - Color Flix
 ## Our app
 * [ColorFlix - Color Palette Generator App](https://github.com/bhaveshasasik/color-palette-app)
 
+## Collaborators
+Suyash Goel - https://github.com/suyashgoel
+Bhavesha Sasikumar - https://github.com/bhaveshasasik
+Minji Yun - https://github.com/minjiyun02
+
 ## References and resources 
 
 [Image color identification with Machine Learning and Image Processing, using Python](https://towardsdatascience.com/image-color-identification-with-machine-learning-and-image-processing-using-python-f3dd0606bdca)
