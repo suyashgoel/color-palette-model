@@ -37,7 +37,7 @@ def upload():
         imageFile.save("./uploadedimages/" + fileName)
 
         # Set the desired number of colors
-        number_of_colors = 5
+        number_of_colors = 6
 
         # Predict colors
         image_path = "./uploadedimages/" + fileName
