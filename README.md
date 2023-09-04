@@ -12,6 +12,9 @@ This is our model for the app - Color Flix
 ## Our app
 * [ColorFlix - Color Palette Generator App](https://github.com/bhaveshasasik/color-palette-app)
 
+## Our UC Davis GDSC End-Of-Year Showcase Slides with Demo:
+* [Team Janus - ColorFlix](https://www.canva.com/design/DAFkoq4QwBo/IMwAPqqkWlxnqC_bjwB7uA/edit?utm_content=DAFkoq4QwBo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
 ## Installation/Prerequisites
 
 * Must have Python environment set up with Flask, sklearn, and Open CV downloaded.
